@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <label for="username">Enter your name (name can't contain digits):</label> <br>
+    <input type="text" id="username" oninput="validateInput(this)">
+    
+    <script>
+        function validateInput(input) {
+            // Отримати значення введеного тексту
+            let inputValue = input.value;
+            
+            // Видалити цифри з тексту
+            let filteredValue = inputValue.replace(/\d/g, '');
+            
+            // Оновити значення введеного тексту без цифр
+            input.value = filteredValue;
+        }
+    </script>
+</body>
+</html>
